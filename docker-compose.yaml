@@ -1,0 +1,14 @@
+services:
+  rust-ubuntu:
+    container_name: rust-ubuntu
+    build: .
+    restart: unless-stopped
+    image: lubuos-rust
+    environment:
+      - XVFB_RESOLUTION=1920x1080x24
+      - XDG_RUNTIME_DIR=/root
+    volumes:
+      - ./testuser-config:/root/.config
+    devices:
+      - /dev/dri:/dev/dri 
+
