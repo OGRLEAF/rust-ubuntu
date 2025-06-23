@@ -20,7 +20,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 
 RUN apt-get update && apt-get install -y libxdo3 xvfb kde-plasma-desktop wget wmctrl openssh-client
-RUN apt-get install curl gstreamer1.0-pipewire
+RUN apt-get install -y curl gstreamer1.0-pipewire
 
 # Instal matlab requirements
 ADD ./matlab-deps.txt /root
