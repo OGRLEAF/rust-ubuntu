@@ -1,4 +1,5 @@
 # FROM ubuntu:latest
+# Initial
 FROM nvidia/cuda:12.2.0-runtime-ubuntu20.04
 
 # Update and install desktop environment and XRDP
