@@ -27,9 +27,9 @@ ADD ./matlab-deps.txt /root
 RUN apt-get install -y $(cat /root/matlab-deps.txt)
 
 # Install rustdesk
-RUN curl -o rustdesk-x86_64.deb https://github.com/rustdesk/rustdesk/releases/download/1.4.0/rustdesk-1.4.0-x86_64.deb
+RUN curl -L https://github.com/rustdesk/rustdesk/releases/download/1.4.0/rustdesk-1.4.0-x86_64.deb -o ./rustdesk-x86_64.deb
 # ADD ./rustdesk-1.4.0-x86_64.deb /root
-RUN dpkg -i   ./rustdesk-x86_64.deb
+RUN dpkg -i ./rustdesk-x86_64.deb
 
 # Install Vivado requirements
 RUN apt-get install -y libtinfo5 libncurses5 gcc
